@@ -1,0 +1,127 @@
+[
+    {
+        "image": "https: //example.com/estate1.jpg",
+        "estate_title": "Luxury Villa with Ocean View",
+        "id": 101,
+        "segment_name": "Residential",
+        "description": "A stunning villa overlooking the azure waters of the Pacific Ocean. Spacious rooms, infinity pool, and private beach access.",
+        "price": "$2,500,000",
+        "status": "For Sale",
+        "area": "5,000 sq ft",
+        "location": "Malibu, California",
+        "facilities": [
+            "Infinity Pool",
+            "Private Beach",
+            "Gourmet Kitchen",
+            "Home Theater"
+        ]
+    },
+    {
+        "image": "https://example.com/estate2.jpg",
+        "estate_title": "Historic Manor in the Countryside",
+        "id": 102,
+        "segment_name": "Heritage",
+        "description": "A grand manor house with centuries-old charm. Ornate architecture, lush gardens, and a library filled with rare books.",
+        "price": "$1,800,000",
+        "status": "For Sale",
+        "area": "8,000 sq ft",
+        "location": "Cotswolds, England",
+        "facilities": [
+            "Library",
+            "Rose Garden",
+            "Drawing Room",
+            "Stables"
+        ]
+    },
+    {
+        "image": "https://example.com/estate3.jpg",
+        "estate_title": "Modern Penthouse in the Sky",
+        "id": 103,
+        "segment_name": "Urban",
+        "description": "A sleek penthouse with floor-to-ceiling windows and panoramic city views. Rooftop terrace, gym, and concierge service.",
+        "price": "$1,200,000",
+        "status": "For Sale",
+        "area": "2,500 sq ft",
+        "location": "New York City, New York",
+        "facilities": [
+            "Rooftop Terrace",
+            "Fitness Center",
+            "Smart Home System",
+            "24/7 Security"
+        ]
+    },
+    {
+        "image": "https://example.com/estate4.jpg",
+        "estate_title": "Secluded Mountain Retreat",
+        "id": 104,
+        "segment_name": "Nature",
+        "description": "A cozy log cabin nestled in the Rockies. Tranquil surroundings, fireplace, and hiking trails at your doorstep.",
+        "price": "$750,000",
+        "status": "For Sale",
+        "area": "1,800 sq ft",
+        "location": "Aspen, Colorado",
+        "facilities": [
+            "Stone Fireplace",
+            "Wraparound Deck",
+            "Wildlife Viewing",
+            "Outdoor Jacuzzi"
+        ]
+    },
+    {
+        "image": "https://example.com/estate5.jpg",
+        "estate_title": "Art Deco Apartment in Paris",
+        "id": 105,
+        "segment_name": "City",
+        "description": "An elegant apartment with vintage charm. High ceilings, parquet floors, and views of the Eiffel Tower.",
+        "price": "$950,000",
+        "status": "For Sale",
+        "area": "1,200 sq ft",
+        "location": "Paris, France",
+        "facilities": [
+            "Balcony",
+            "Art Deco Details",
+            "Cafés Nearby",
+            "Metro Access"
+        ]
+    },
+    {
+        "image": "https://example.com/estate6.jpg",
+        "estate_title": "Beachfront Bungalow in Bali",
+        "id": 106,
+        "segment_name": "Vacation",
+        "description": "A tropical paradise steps away from the beach. Bamboo furnishings, palm trees, and ocean breezes.",
+        "price": "$350,000",
+        "status": "For Sale",
+        "area": "800 sq ft",
+        "location": "Seminyak, Bali",
+        "facilities": [
+            "Outdoor Shower",
+            "Sunset Views",
+            "Surfing Spots",
+            "Beach Bar"
+        ]
+    },
+    {
+        "image": "https://example.com/estate7.jpg",
+        "estate_title": "Rustic Farmhouse in Tuscany",
+        "id": 107,
+        "segment_name": "Rural",
+        "description": "A restored farmhouse surrounded by vineyards. Tuscan cuisine, olive groves, and wine cellars.",
+        "price": "$680,000",
+        "status": "For Sale",
+        "area": "3,000 sq ft",
+        "location": "Chianti, Italy",
+        "facilities": [
+            "Wine Tasting",
+            "Courtyard",
+            "Wood-Fired Pizza Oven",
+            "Swimming Pool"
+        ]
+    },
+    {
+        "image": "https://example.com/estate8.jpg",
+        "estate_title": "Mountain View Chalet in Switzerland",
+        "id": 108,
+        "segment_name": "Alpine"
+    }
+]
