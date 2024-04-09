@@ -1,10 +1,18 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 //import logo from '../assets/HeadRoom_transparent.png';
 import { MdOutlineAddHomeWork } from "react-icons/md";
+import { useContext } from 'react';
+import { AuthContext } from '../providers/AuthProvider';
 
 const Navbar = () => {
 
+    const { user, logOut } = useContext(AuthContext);
 
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/update'>Update profile</NavLink></li>
@@ -33,7 +41,14 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {
+                        user ?
+                            <button onClick={handleLogOut} className="btn">Log Out</button>
+                            :
+                            <Link to='/login'>
+                                <button className="btn">Login</button></Link>
+                    }
+
                 </div>
             </div>
         </div>

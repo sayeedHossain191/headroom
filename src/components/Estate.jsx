@@ -1,5 +1,6 @@
 import { BsHouse } from "react-icons/bs";
 import { CiLocationArrow1 } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Estate = ({ estate }) => {
 
@@ -18,7 +19,9 @@ const Estate = ({ estate }) => {
                     </div>
 
                     <div className="card-actions justify-center mt-5">
-                        <button className="btn btn-primary">View Property</button>
+                        <Link to='/details'>
+                            <button className="btn btn-primary">View Property</button>
+                        </Link>
                     </div>
                 </div>
             </div>
