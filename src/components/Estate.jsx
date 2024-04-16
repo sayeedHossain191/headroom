@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 
 const Estate = ({ estate }) => {
 
-    const { price, estate_title, location, area } = estate
+    const { price, estate_title, location, area, image, status } = estate;
+
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+            <div className="card w-96 h-[420px] bg-base-100 shadow-xl">
+                <figure className="px-5 pt-5"><img className="rounded-lg" src={image} alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title font-semibold">{price}</h2>
+                    <h2 className="card-title font-semibold">{price} <div className="badge bg-blue-700">{status}</div>
+                    </h2>
+
                     <p className="font-medium">{estate_title}</p>
 
                     <div className="flex gap-8">
@@ -20,7 +23,7 @@ const Estate = ({ estate }) => {
 
                     <div className="card-actions justify-center mt-5">
                         <Link to='/details'>
-                            <button className="btn btn-primary">View Property</button>
+                            <button className="btn bg-orange-500 text-black">View Property</button>
                         </Link>
                     </div>
                 </div>

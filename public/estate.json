@@ -1,6 +1,6 @@
 [
     {
-        "image": "https: //example.com/estate1.jpg",
+        "image": "https://i.ibb.co/YQGHCdz/frames-for-your-heart-m-R1-CIDdu-GLc-unsplash.jpg",
         "estate_title": "Luxury Villa with Ocean View",
         "id": 101,
         "segment_name": "Residential",
@@ -17,13 +17,13 @@
         ]
     },
     {
-        "image": "https://example.com/estate2.jpg",
-        "estate_title": "Historic Manor in the Countryside",
+        "image": "https://i.ibb.co/gS3wmF3/luxury-bedroom-suite-resort-high-rise-hotel-with-working-table-1.jpg",
+        "estate_title": "Residential apartment in the Countryside",
         "id": 102,
-        "segment_name": "Heritage",
+        "segment_name": "Residential",
         "description": "A grand manor house with centuries-old charm. Ornate architecture, lush gardens, and a library filled with rare books.",
         "price": "$1,800,000",
-        "status": "For Sale",
+        "status": "Sold Out",
         "area": "8,000 sq ft",
         "location": "Cotswolds, England",
         "facilities": [
@@ -34,15 +34,15 @@
         ]
     },
     {
-        "image": "https://example.com/estate3.jpg",
-        "estate_title": "Modern Penthouse in the Sky",
+        "image": "https://i.ibb.co/fkzSfZ4/jacques-bopp-Hh18-POSx5qk-unsplash.jpg",
+        "estate_title": "Modern townhouse in the Sky",
         "id": 103,
-        "segment_name": "Urban",
-        "description": "A sleek penthouse with floor-to-ceiling windows and panoramic city views. Rooftop terrace, gym, and concierge service.",
+        "segment_name": "Townhouse",
+        "description": "A sleek townhouse with floor-to-ceiling windows and panoramic city views. Rooftop terrace, gym, and concierge service.",
         "price": "$1,200,000",
         "status": "For Sale",
         "area": "2,500 sq ft",
-        "location": "New York City, New York",
+        "location": "Brooklyn, New York",
         "facilities": [
             "Rooftop Terrace",
             "Fitness Center",
@@ -51,13 +51,13 @@
         ]
     },
     {
-        "image": "https://example.com/estate4.jpg",
+        "image": "https://i.ibb.co/bWq9Z1v/sieuwert-otterloo-aren8nutd1-Q-unsplash.jpg",
         "estate_title": "Secluded Mountain Retreat",
         "id": 104,
-        "segment_name": "Nature",
+        "segment_name": "Single family home",
         "description": "A cozy log cabin nestled in the Rockies. Tranquil surroundings, fireplace, and hiking trails at your doorstep.",
         "price": "$750,000",
-        "status": "For Sale",
+        "status": "Sold Out",
         "area": "1,800 sq ft",
         "location": "Aspen, Colorado",
         "facilities": [
@@ -68,10 +68,10 @@
         ]
     },
     {
-        "image": "https://example.com/estate5.jpg",
+        "image": "https://i.ibb.co/f8RM288/3d-rendering-loft-luxury-living-room-with-shelf-near-dining-table.jpg",
         "estate_title": "Art Deco Apartment in Paris",
         "id": 105,
-        "segment_name": "City",
+        "segment_name": "Apartment",
         "description": "An elegant apartment with vintage charm. High ceilings, parquet floors, and views of the Eiffel Tower.",
         "price": "$950,000",
         "status": "For Sale",
@@ -85,13 +85,13 @@
         ]
     },
     {
-        "image": "https://example.com/estate6.jpg",
+        "image": "https://i.ibb.co/YkVGx5q/pexels-thanhhoa-tran-1488327.jpg",
         "estate_title": "Beachfront Bungalow in Bali",
         "id": 106,
         "segment_name": "Vacation",
         "description": "A tropical paradise steps away from the beach. Bamboo furnishings, palm trees, and ocean breezes.",
         "price": "$350,000",
-        "status": "For Sale",
+        "status": "Sold Out",
         "area": "800 sq ft",
         "location": "Seminyak, Bali",
         "facilities": [
@@ -102,11 +102,11 @@
         ]
     },
     {
-        "image": "https://example.com/estate7.jpg",
-        "estate_title": "Rustic Farmhouse in Tuscany",
+        "image": "https://i.ibb.co/Rj34BBq/terrah-holly-pmhdkg-RCbt-E-unsplash-1.jpg",
+        "estate_title": "Rustic Townhouse in Tuscany",
         "id": 107,
-        "segment_name": "Rural",
-        "description": "A restored farmhouse surrounded by vineyards. Tuscan cuisine, olive groves, and wine cellars.",
+        "segment_name": "Townhouse",
+        "description": "A restored townhouse surrounded by vineyards. Tuscan cuisine, olive groves, and wine cellars.",
         "price": "$680,000",
         "status": "For Sale",
         "area": "3,000 sq ft",
@@ -119,9 +119,20 @@
         ]
     },
     {
-        "image": "https://example.com/estate8.jpg",
-        "estate_title": "Mountain View Chalet in Switzerland",
+        "image": "https://i.ibb.co/cLc14j3/florida-1744691-1920.jpg",
+        "estate_title": "Beach house for senior living communities",
         "id": 108,
-        "segment_name": "Alpine"
+        "segment_name": "Senior Living House",
+        "description": "A restored house surrounded by vineyards. Tuscan cuisine, olive groves, and wine cellars.",
+        "price": "$190,000",
+        "status": "For Sale",
+        "area": "2,200 sq ft",
+        "location": "Kuakata, Bangladesh",
+        "facilities": [
+            "Drawing Room",
+            "Courtyard",
+            "Wildlife Viewing",
+            "Outdoor Jacuzzi"
+        ]
     }
 ]

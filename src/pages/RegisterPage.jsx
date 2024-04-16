@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const RegisterPage = () => {
 
@@ -30,6 +31,11 @@ const RegisterPage = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    HeadRoom | RegisterPage
+                </title>
+            </Helmet>
             <div>
                 <h2 className='text-3xl my-10 text-center'>Please Register</h2>
 
