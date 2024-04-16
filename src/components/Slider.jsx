@@ -15,9 +15,6 @@ const Slider = () => {
 
     return (
         <div>
-            <div className="title">
-                <h1>Our Technology Partner</h1>
-            </div>
 
             <div className='my-14 font-merriweather'>
                 <h3 className='text-center my-14'>Trusted by 100+ Companies across the globe! </h3>

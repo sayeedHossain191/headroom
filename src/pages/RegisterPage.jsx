@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 
+
+
 const RegisterPage = () => {
 
     const { createUser } = useContext(AuthContext);
 
     const handleRegister = (e) => {
+
         e.preventDefault();
         console.log(e.currentTarget)
         const form = new FormData(e.currentTarget)

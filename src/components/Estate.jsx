@@ -9,7 +9,7 @@ const Estate = ({ estate }) => {
     return (
         <div>
             <div className="card w-96 h-[420px] bg-base-100 shadow-xl">
-                <figure className="px-5 pt-5"><img className="rounded-lg" src={image} alt="Shoes" /></figure>
+                <figure className="px-5 pt-5"><img src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title font-semibold">{price} <div className="badge bg-blue-700">{status}</div>
                     </h2>

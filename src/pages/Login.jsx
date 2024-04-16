@@ -4,9 +4,13 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
+
 const Login = () => {
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn, googleLogIn } = useContext(AuthContext);
+
     const location = useLocation();
     const navigate = useNavigate();
     console.log(location)
@@ -20,6 +24,16 @@ const Login = () => {
         console.log(email, password)
 
         signIn(email, password)
+            .then(result => {
+                console.log(result.user)
+
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error)
+            })
+
+        googleLogIn(email, password)
             .then(result => {
                 console.log(result.user)
 
@@ -58,6 +72,12 @@ const Login = () => {
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn btn-primary">Login</button>
+                    </div>
+                    <div className="form-control mt-6">
+                        <button className="btn bg-slate-200 text-black"><FcGoogle className='text-2xl' /> Login with Google</button>
+                    </div>
+                    <div className="form-control mt-6">
+                        <button onClick={() => googleLogIn()} className="btn bg-slate-200 text-black"><FaGithub className='text-2xl' /> Login with GitHub</button>
                     </div>
                 </form>
                 <p className='text-center mt-4'>Don't have an account? <Link className='text-blue-600 font-bold' to='/register'>Register</Link></p>

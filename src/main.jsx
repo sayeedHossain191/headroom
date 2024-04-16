@@ -15,6 +15,7 @@ import RegisterPage from './pages/RegisterPage.jsx';
 import EstateDetails from './pages/EstateDetails.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import { HelmetProvider } from 'react-helmet-async';
+import Services from './pages/Services.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: '/details',
         element: <EstateDetails />
+      },
+      {
+        path: '/services',
+        element: <Services />
       }
     ]
   },
