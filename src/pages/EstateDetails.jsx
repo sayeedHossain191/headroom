@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from 'react-router-dom';
-
+import { Helmet } from 'react-helmet-async';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
@@ -15,7 +15,11 @@ const EstateDetails = () => {
 
     return (
         <div>
-
+            <Helmet>
+                <title>
+                    HeadRoom | Estate Details
+                </title>
+            </Helmet>
             <div className="hero min-h-screen my-8">
                 <div className="hero-content ">
                     <div>

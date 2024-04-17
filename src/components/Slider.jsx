@@ -16,7 +16,7 @@ const Slider = () => {
     return (
         <div>
 
-            <div className='my-14 font-merriweather'>
+            <div className='mb-14 mt-24 font-merriweather'>
                 <h3 className='text-center my-14'>Trusted by 100+ Companies across the globe! </h3>
                 <Marquee direction="right" speed={100} pauseOnHover={true}>
                     <div className="image_wrapper w-1/2">

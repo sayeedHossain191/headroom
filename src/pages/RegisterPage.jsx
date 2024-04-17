@@ -1,5 +1,7 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { Helmet } from 'react-helmet-async';
@@ -9,6 +11,7 @@ import { Helmet } from 'react-helmet-async';
 const RegisterPage = () => {
 
     const { createUser } = useContext(AuthContext);
+    const [registerError, setRegisterError] = useState('')
 
     const handleRegister = (e) => {
 
@@ -21,6 +24,24 @@ const RegisterPage = () => {
         const email = form.get('email');
         const password = form.get('password');
         console.log(name, photo, email, password)
+
+        setRegisterError('')
+
+        if (password.length < 6) {
+            setRegisterError('Password should be at least 6 characters or longer');
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            setRegisterError('Password should contain atleast one upper case')
+            return;
+        }
+        else if (!/[a-z]/.test(password)) {
+            setRegisterError('Password should contain atleast one lower case')
+            return;
+        }
+        else {
+            toast("Password is not valid");
+        }
 
         //Create User
         createUser(email, password)
@@ -36,7 +57,7 @@ const RegisterPage = () => {
         <div>
             <Helmet>
                 <title>
-                    HeadRoom | RegisterPage
+                    HeadRoom | Register Page
                 </title>
             </Helmet>
             <div>
@@ -78,6 +99,7 @@ const RegisterPage = () => {
                 </form>
                 <p className='text-center mt-4'>Already have an account? <Link className='text-blue-600 font-bold' to='/login'>Login</Link></p>
             </div>
+            <ToastContainer />
         </div>
     );
 };
