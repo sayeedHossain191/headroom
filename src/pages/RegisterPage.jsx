@@ -40,9 +40,9 @@ const RegisterPage = () => {
                 </title>
             </Helmet>
             <div>
-                <h2 className='text-3xl my-10 text-center'>Please Register</h2>
+                <h2 className='text-4xl my-8 text-center font-merriweather'>Please Register</h2>
 
-                <form onSubmit={handleRegister} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+                <form onSubmit={handleRegister} className="card-body md:w-3/4 lg:w-1/2 mx-auto font-lato">
 
                     <div className="form-control">
                         <label className="label">
@@ -73,7 +73,7 @@ const RegisterPage = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <button className="btn btn-primary">Create Account</button>
                     </div>
                 </form>
                 <p className='text-center mt-4'>Already have an account? <Link className='text-blue-600 font-bold' to='/login'>Login</Link></p>

@@ -16,6 +16,7 @@ import EstateDetails from './pages/EstateDetails.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 import Services from './pages/Services.jsx';
+import PrivateRoute from './routes/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,6 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
-        loader: () => fetch('/estate.json')
       },
       {
         path: '/login',
@@ -37,8 +37,11 @@ const router = createBrowserRouter([
         element: <RegisterPage />
       },
       {
-        path: '/details',
-        element: <EstateDetails />
+        path: '/details/:id',
+        element: <PrivateRoute>
+          <EstateDetails />
+        </PrivateRoute>,
+        loader: () => fetch('/estate.json')
       },
       {
         path: '/services',

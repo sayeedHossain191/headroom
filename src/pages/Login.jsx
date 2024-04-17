@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Login = () => {
 
-    const { signIn, googleLogIn } = useContext(AuthContext);
+    const { signIn, googleLogIn, githubSignIn } = useContext(AuthContext);
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -33,15 +33,10 @@ const Login = () => {
                 console.error(error)
             })
 
-        googleLogIn(email, password)
-            .then(result => {
-                console.log(result.user)
+        // googleLogIn()
+        // githubSignIn()
 
-                navigate(location?.state ? location.state : '/')
-            })
-            .catch(error => {
-                console.error(error)
-            })
+
     }
 
     return (
@@ -52,16 +47,16 @@ const Login = () => {
                 </title>
             </Helmet>
             <div>
-                <h2 className='text-3xl my-10 text-center'>Login your account</h2>
+                <h2 className='text-4xl my-8 text-center font-merriweather'>Login your Account</h2>
 
-                <form onSubmit={handleLogin} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+                <form onSubmit={handleLogin} className="card-body md:w-3/4 lg:w-1/2 mx-auto font-lato">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
                         <input type="email" name='email' placeholder="email" className="input input-bordered" required />
                     </div>
-                    <div className="form-control">
+                    <div className="form-control -mb-5">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
@@ -70,17 +65,22 @@ const Login = () => {
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
+
                     <div className="form-control mt-6">
                         <button className="btn btn-primary">Login</button>
                     </div>
+                    <div className="divider -mb-5">or</div>
+
                     <div className="form-control mt-6">
-                        <button className="btn bg-slate-200 text-black"><FcGoogle className='text-2xl' /> Login with Google</button>
+                        <button onClick={googleLogIn} className="btn bg-slate-200 text-black"><FcGoogle className='text-2xl' /> Login with Google</button>
                     </div>
+                    <div className="divider -mb-5">or</div>
+
                     <div className="form-control mt-6">
-                        <button onClick={() => googleLogIn()} className="btn bg-slate-200 text-black"><FaGithub className='text-2xl' /> Login with GitHub</button>
+                        <button onClick={githubSignIn} className="btn bg-slate-200 text-black"><FaGithub className='text-2xl' /> Login with GitHub</button>
                     </div>
                 </form>
-                <p className='text-center mt-4'>Don't have an account? <Link className='text-blue-600 font-bold' to='/register'>Register</Link></p>
+                <p className='text-center'>Don't have an account? <Link className='text-blue-600 font-bold' to='/register'>Register</Link></p>
             </div>
         </div>
     );

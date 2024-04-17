@@ -3,6 +3,8 @@ import Estates from "../components/Estates";
 import Slider from "../components/Slider";
 import { Helmet } from 'react-helmet-async';
 
+
+
 const Home = () => {
 
 

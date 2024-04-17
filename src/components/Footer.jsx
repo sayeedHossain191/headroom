@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <div>
-            <footer className="footer p-10 bg-base-200 text-base-content mt-40">
+            <footer className="footer p-10 bg-base-200 text-base-content mt-28 font-lato">
                 <nav>
                     <h6 className="footer-title flex items-center"><MdOutlineAddHomeWork className="mr-1" />Head<span className='text-orange-600'>Room</span></h6>
                     <a className="link link-hover">2728 Hickory StreetSalt
@@ -36,7 +36,7 @@ const Footer = () => {
                         </label>
                         <div className="join">
                             <input type="text" placeholder="username@site.com" className="input input-bordered join-item rounded-full w-full" />
-                            <button className="btn bg-orange-400 join-item rounded-full">Subscribe</button>
+                            <button className="btn bg-orange-500 join-item rounded-full text-black">Subscribe</button>
                         </div>
                     </fieldset>
                 </form>
