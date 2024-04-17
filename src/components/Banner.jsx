@@ -1,11 +1,21 @@
-// import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+//import React, { useRef, useState } from 'react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+//import { Pagination } from 'swiper/modules';
+import '../../src/style.css'
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-// import 'swiper/css';
-// import 'swiper/css/effect-coverflow';
-// import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
 
-// import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+import slide1 from '../assets/building image/3d-electric-car-building.jpg'
+import slide2 from '../assets/building image/pexels-binyamin-mellish-106399.jpg'
+import slide3 from '../assets/building image/pexels-thanhhoa-tran-1488327.jpg'
+import slide4 from '../assets/building image/real-estate-4955086_1920.jpg'
+import slide5 from '../assets/building image/todd-kent-178j8tJrNlc-unsplash.jpg'
+
+//import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 
 
 import { CiSearch } from "react-icons/ci";
@@ -61,58 +71,83 @@ const Banner = () => {
                 </div>
             </div>
 
+            <div className=''>
+                <div>
+                    <h1 className='text-5xl mb-6'>Trusted Real Estate Property for you</h1>
+                    <p className='text-xl'>Looking for your dream house or property. Search here and select your best one from more than 1 million listing</p>
+                </div>
+                <div className='h-auto'>
+                    <Swiper
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide><img src={slide1} alt="" /></SwiperSlide>
+                        <SwiperSlide><img src={slide2} alt="" /></SwiperSlide>
+                        <SwiperSlide><img src={slide3} alt="" /></SwiperSlide>
+                        <SwiperSlide><img src={slide4} alt="" /></SwiperSlide>
+                        <SwiperSlide><img src={slide5} alt="" /></SwiperSlide>
+                    </Swiper>
+                </div>
+            </div>
+
             {/* <Swiper
-                effect={'coverflow'}
-                grabCursor={true}
-                centeredSlides={true}
-                loop={true}
-                slidesPerView={'auto'}
-                coverflowEffect={{
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 2.5,
-                }}
-                pagination={{ el: '.swiper-pagination', clickable: true }}
-                navigation={{
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                slidesPerView={1}
+                spaceBetween={10}
+                pagination={{
                     clickable: true,
                 }}
-                modules={[EffectCoverflow, Pagination, Navigation]}
-                className="swiper_container"
+                breakpoints={{
+                    '@0.00': {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
+                    '@0.75': {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    '@1.00': {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    '@1.50': {
+                        slidesPerView: 4,
+                        spaceBetween: 50,
+                    },
+                }}
+                modules={[Pagination]}
+                className="mySwiper mb-24"
             >
                 <SwiperSlide>
-                    <img src={slide_image_1} alt="slide_image" />
+                    <img src={slider1} alt="" />
+                    <h3 className='text-4xl uppercase text-center -mt-16 text-white'>Salads</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide_image_2} alt="slide_image" />
+                    <img src={slider2} alt="" />
+                    <h3 className='text-4xl uppercase text-center -mt-16 text-white'>Pizza</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide_image_3} alt="slide_image" />
+                    <img src={slider3} alt="" />
+                    <h3 className='text-4xl uppercase text-center -mt-16 text-white'>Soups</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide_image_4} alt="slide_image" />
+                    <img src={slider4} alt="" />
+                    <h3 className='text-4xl uppercase text-center -mt-16 text-white'>Desserts</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide_image_5} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide_image_6} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide_image_7} alt="slide_image" />
+                    <img src={slider5} alt="" />
+                    <h3 className='text-4xl uppercase text-center -mt-16 text-white'>Salads</h3>
                 </SwiperSlide>
 
-                <div className="slider-controler">
-                    <div className="swiper-button-prev slider-arrow">
-                        <ion-icon name="arrow-back-outline"></ion-icon>
-                    </div>
-                    <div className="swiper-button-next slider-arrow">
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </div>
-                    <div className="swiper-pagination"></div>
-                </div>
             </Swiper> */}
         </div>
     );
