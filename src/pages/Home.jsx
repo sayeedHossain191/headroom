@@ -15,7 +15,7 @@ const Home = () => {
                     HeadRoom | Home
                 </title>
             </Helmet>
-            <h2 className='font-merriweather text-3xl'>This is Home</h2>
+
             <Banner />
             <Slider />
             <Estates />

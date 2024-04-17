@@ -17,7 +17,7 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/services'>Our Services</NavLink></li>
         <li><NavLink to='/update'>Update Profile</NavLink></li>
-        <li><NavLink to='/user'>User Profile</NavLink></li>
+        {/* <li><NavLink to='/user'>User Profile</NavLink></li> */}
     </>
 
     return (
@@ -41,15 +41,28 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {
+                    {/* {
                         user ?
                             <button onClick={handleLogOut} className="btn">Log Out</button>
                             :
                             <Link to='/login'>
                                 <button className="btn">Login</button></Link>
-                    }
+                    } */}
 
+                    {
+                        user?.uid ?
+                            <>
+                                <span className=""><img src={user?.photoURL} title={user?.displayName} className=" ml-5 h-10 rounded-full" alt="" /></span>
+                                <button onClick={handleLogOut} className="btn btn-ghost normal-case text-xl">Log Out</button>
+                            </>
+                            :
+                            <>
+                                <Link to='/login' className="btn btn-ghost normal-case text-xl">Login</Link>
+                                <Link to='/register' className="btn btn-ghost normal-case text-xl">Register</Link>
+                            </>
+                    }
                 </div>
+
             </div>
         </div>
     );

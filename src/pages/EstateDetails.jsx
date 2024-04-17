@@ -1,5 +1,3 @@
-import { RxDimensions } from "react-icons/rx";
-import { GrMapLocation } from "react-icons/gr";
 import { useLoaderData, useParams } from 'react-router-dom';
 
 import AOS from 'aos';
@@ -17,9 +15,6 @@ const EstateDetails = () => {
 
     return (
         <div>
-            <RxDimensions />
-            <GrMapLocation />
-
 
             <div className="hero min-h-screen my-8">
                 <div className="hero-content ">
@@ -65,14 +60,18 @@ const EstateDetails = () => {
 
                         </div>
 
-                        <div className="mt-8"><div className="flex flex-col w-full lg:flex-row">
-                            <div className="grid flex-grow card bg-base-300 rounded-box place-items-center">{details.facilities[0]}</div>
+                        <h2 data-aos="flip-up" data-aos-duration="2200" className="text-2xl font-bold mt-6 font-merriweather mb-3">House Facilities</h2>
+                        <div className="mt-8"><div className="flex flex-col w-full lg:flex-row font-lato text-black font-semibold">
+                            <div data-aos="fade-up" data-aos-duration="1400" className="grid flex-grow card rounded-box place-items-center py-2 bg-slate-100">{details.facilities[0]}</div>
                             <div className="divider lg:divider-horizontal"></div>
-                            <div className="grid flex-grow card bg-base-300 rounded-box place-items-center">{details.facilities[1]}</div>
+
+                            <div data-aos="fade-up" data-aos-duration="1500" className="grid flex-grow card  rounded-box place-items-center bg-slate-100">{details.facilities[1]}</div>
                             <div className="divider lg:divider-horizontal"></div>
-                            <div className="grid flex-grow card bg-base-300 rounded-box place-items-center">{details.facilities[2]}</div>
+
+                            <div data-aos="fade-up" data-aos-duration="1600" className="grid flex-grow card  rounded-box place-items-center bg-slate-100">{details.facilities[2]}</div>
                             <div className="divider lg:divider-horizontal"></div>
-                            <div className="grid flex-grow card bg-base-300 rounded-box place-items-center">{details.facilities[3]}</div>
+
+                            <div data-aos="fade-up" data-aos-duration="1700" className="grid flex-grow card rounded-box place-items-center bg-slate-100">{details.facilities[3]}</div>
                         </div>
 
                         </div>

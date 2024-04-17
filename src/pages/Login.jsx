@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Login = () => {
 
-    const { signIn, googleLogIn, githubSignIn } = useContext(AuthContext);
+    const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -27,16 +27,42 @@ const Login = () => {
             .then(result => {
                 console.log(result.user)
 
+                //navigate after login
                 navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.error(error)
             })
 
-        // googleLogIn()
-        // githubSignIn()
 
+    }
 
+    //const { ProviderLogin } = useContext(AuthContext);
+    // const googleProvider = new GoogleAuthProvider();
+    const handleGoggleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                console.log(result.user)
+
+                //navigate after login
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
+    const handleGithubSignIn = () => {
+        githubSignIn()
+            .then(result => {
+                console.log(result.user)
+
+                //navigate after login
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
 
     return (
@@ -72,14 +98,17 @@ const Login = () => {
                     <div className="divider -mb-5">or</div>
 
                     <div className="form-control mt-6">
-                        <button onClick={googleLogIn} className="btn bg-slate-200 text-black"><FcGoogle className='text-2xl' /> Login with Google</button>
+                        <button onClick={handleGoggleSignIn} className="btn bg-slate-200 text-black"><FcGoogle className='text-2xl' /> Login with Google</button>
                     </div>
                     <div className="divider -mb-5">or</div>
 
                     <div className="form-control mt-6">
-                        <button onClick={githubSignIn} className="btn bg-slate-200 text-black"><FaGithub className='text-2xl' /> Login with GitHub</button>
+                        <button onClick={handleGithubSignIn} className="btn bg-slate-200 text-black"><FaGithub className='text-2xl' /> Login with GitHub</button>
                     </div>
                 </form>
+
+
+
                 <p className='text-center'>Don't have an account? <Link className='text-blue-600 font-bold' to='/register'>Register</Link></p>
             </div>
         </div>
