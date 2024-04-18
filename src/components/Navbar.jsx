@@ -15,9 +15,10 @@ const Navbar = () => {
     }
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/services'>Our Services</NavLink></li>
+        <li><NavLink to='/blogs'>Blogs</NavLink></li>
+        <li><NavLink to='/about'>About Us</NavLink></li>
         <li><NavLink to='/update'>Update Profile</NavLink></li>
-        {/* <li><NavLink to='/user'>User Profile</NavLink></li> */}
+
     </>
 
     return (
@@ -32,8 +33,10 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl gap-0"><MdOutlineAddHomeWork className='mr-1' /> HEAD<span className='text-orange-600'>ROOM</span></a>
-                    {/* Head<span className='text-orange-600'>Room</span> */}
+                    <Link to='/'>
+                        <a className="btn btn-ghost text-xl gap-0"><MdOutlineAddHomeWork className='mr-1' /> HEAD<span className='text-orange-600'>ROOM</span></a>
+                    </Link>
+
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -53,12 +56,12 @@ const Navbar = () => {
                         user?.uid ?
                             <>
                                 <span className=""><img src={user?.photoURL} title={user?.displayName} className=" ml-5 h-10 rounded-full" alt="" /></span>
-                                <button onClick={handleLogOut} className="btn btn-ghost normal-case text-xl">Log Out</button>
+                                <button onClick={handleLogOut} className="btn btn-ghost normal-case text-lg">Log Out</button>
                             </>
                             :
                             <>
-                                <Link to='/login' className="btn btn-ghost normal-case text-xl">Login</Link>
-                                <Link to='/register' className="btn btn-ghost normal-case text-xl">Register</Link>
+                                <Link to='/login' className="btn btn-ghost normal-case text-lg">Login</Link>
+                                <Link to='/register' className="btn btn-ghost normal-case text-lg">Register</Link>
                             </>
                     }
                 </div>

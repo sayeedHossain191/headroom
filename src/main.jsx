@@ -15,10 +15,10 @@ import RegisterPage from './pages/RegisterPage.jsx';
 import EstateDetails from './pages/EstateDetails.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import { HelmetProvider } from 'react-helmet-async';
-import Services from './pages/Services.jsx';
 import PrivateRoute from './routes/PrivateRoute.jsx';
-import UserProfile from './pages/UserProfile.jsx';
 import UpdateProfile from './pages/UpdateProfile.jsx';
+import Blog from './pages/Blog.jsx';
+import AboutUs from './pages/AboutUs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +39,10 @@ const router = createBrowserRouter([
         element: <RegisterPage />
       },
       {
+        path: '/about',
+        element: <AboutUs />
+      },
+      {
         path: '/details/:id',
         element: <PrivateRoute>
           <EstateDetails />
@@ -46,16 +50,16 @@ const router = createBrowserRouter([
         loader: () => fetch('/estate.json')
       },
       {
-        path: '/services',
-        element: <Services />
-      },
-      {
-        path: '/user',
-        element: <UserProfile />
+        path: '/blogs',
+        element: <PrivateRoute>
+          <Blog />
+        </PrivateRoute>
       },
       {
         path: '/update',
-        element: <UpdateProfile />
+        element: <PrivateRoute>
+          <UpdateProfile />
+        </PrivateRoute>
       },
 
     ]

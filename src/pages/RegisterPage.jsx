@@ -41,6 +41,7 @@ const RegisterPage = () => {
         }
         else {
             toast("Password is not valid");
+
         }
 
         //Create User
@@ -50,6 +51,7 @@ const RegisterPage = () => {
             })
             .catch(error => {
                 console.error(error)
+                setRegisterError(error.message)
             })
     }
 
@@ -97,6 +99,10 @@ const RegisterPage = () => {
                         <button className="btn btn-primary">Create Account</button>
                     </div>
                 </form>
+                {
+                    registerError && <p className='text-red-600 text-center'>{registerError}</p>
+                }
+
                 <p className='text-center mt-4'>Already have an account? <Link className='text-blue-600 font-bold' to='/login'>Login</Link></p>
             </div>
             <ToastContainer />

@@ -13,10 +13,11 @@ const Estate = ({ estate }) => {
 
     return (
         <div>
-            <div className="card w-96 h-[420px] bg-base-100 shadow-xl mt-12">
-                <figure className="px-5 pt-5"><img data-aos="zoom-in" data-aos-duration="1000" src={image} alt="Shoes" /></figure>
+
+            <div className="card w-96 h-[420px] bg-black shadow-xl mt-12">
+                <figure className="px-5"><img data-aos="zoom-in" data-aos-duration="1000" src={image} alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title font-semibold">{price} <div className="badge bg-blue-700">{status}</div>
+                    <h2 className="card-title font-semibold">{price} <div className="badge bg-cyan-800">{status}</div>
                     </h2>
 
                     <p className="font-medium">{estate_title}</p>
