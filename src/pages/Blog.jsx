@@ -2,10 +2,17 @@
 import img1 from '../assets/blog image/Rectangle 66.png'
 import img2 from '../assets/blog image/Rectangle 66 (1).png'
 import img3 from '../assets/blog image/analog-landscape-city-with-buildings.jpg'
+import { Helmet } from 'react-helmet-async';
+
 const Blog = () => {
+
     return (
         <div>
-
+            <Helmet>
+                <title>
+                    HeadRoom | Blogs
+                </title>
+            </Helmet>
             <div className='grid lg:grid-cols-3'>
                 <div className="card  bg-base-100">
                     <figure><img src={img1} alt="Shoes" /></figure>
