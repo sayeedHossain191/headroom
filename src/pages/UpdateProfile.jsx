@@ -61,7 +61,7 @@ const UpdateProfile = () => {
                 </div>
                 <div className=''>
                     <button className="btn w-1/4 btn-outline btn-error mr-10">Cancel</button>
-                    <button className="btn w-1/4 bg-orange-500 text-black">Submit</button>
+                    <button className="btn w-1/4 bg-orange-500 text-black">Update</button>
                 </div>
             </div>
         </div>

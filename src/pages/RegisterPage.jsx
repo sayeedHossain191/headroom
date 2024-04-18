@@ -11,7 +11,8 @@ import { Helmet } from 'react-helmet-async';
 const RegisterPage = () => {
 
     const { createUser } = useContext(AuthContext);
-    const [registerError, setRegisterError] = useState('')
+    const [registerError, setRegisterError] = useState('');
+
 
     const handleRegister = (e) => {
 
